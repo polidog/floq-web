@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SwRegister } from "@/components/sw-register";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,11 +17,17 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#2563eb",
 };
 
 export const metadata: Metadata = {
   title: "floq - GTD Task Manager",
   description: "GTDベースのタスク管理ツール floq のWebインターフェース",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "floq",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <SwRegister />
       </body>
     </html>
   );
