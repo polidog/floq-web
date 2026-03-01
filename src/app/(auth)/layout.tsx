@@ -1,5 +1,6 @@
 import { BottomNav } from "@/components/bottom-nav";
 import { Header } from "@/components/header";
+import { MobileTaskFab } from "@/components/mobile-task-fab";
 import { Sidebar } from "@/components/sidebar";
 
 export default function AuthLayout({
@@ -17,6 +18,7 @@ export default function AuthLayout({
         </main>
       </div>
       <BottomNav />
+      <MobileTaskFab />
     </div>
   );
 }

@@ -10,13 +10,18 @@ export async function createTask(formData: FormData) {
   const title = formData.get("title") as string;
   if (!title?.trim()) return;
 
+  const status = (formData.get("status") as TaskStatus) || "inbox";
+  const dueDateStr = formData.get("dueDate") as string;
+  const dueDate = dueDateStr ? new Date(dueDateStr) : null;
+
   const now = new Date();
   const id = crypto.randomUUID();
 
   await db.insert(tasks).values({
     id,
     title: title.trim(),
-    status: "inbox",
+    status,
+    dueDate,
     isProject: false,
     isFocused: false,
     createdAt: now,

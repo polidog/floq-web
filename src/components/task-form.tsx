@@ -12,7 +12,7 @@ export function TaskForm() {
   }
 
   return (
-    <form ref={formRef} action={handleSubmit} className="flex gap-2 p-4">
+    <form ref={formRef} action={handleSubmit} className="hidden gap-2 p-4 md:flex">
       <input
         name="title"
         type="text"
