@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { COOKIE_NAME } from "@/lib/auth/constants";
 
-const PUBLIC_PATHS = ["/", "/api/auth/logout"];
+const PUBLIC_PATHS = ["/login", "/api/auth/logout"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
 
   const session = request.cookies.get(COOKIE_NAME);
   if (!session) {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   return NextResponse.next();

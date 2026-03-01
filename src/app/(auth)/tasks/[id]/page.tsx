@@ -24,10 +24,10 @@ export default async function TaskDetailPage({
   }
 
   return (
-    <div className="mx-auto max-w-2xl p-6">
+    <div className="mx-auto max-w-2xl p-4 md:p-6">
       <Link
         href="/tasks"
-        className="mb-4 inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
+        className="-ml-2 mb-4 inline-flex items-center gap-1 rounded-md px-2 py-2 text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
       >
         <svg
           className="h-4 w-4"

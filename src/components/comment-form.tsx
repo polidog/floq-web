@@ -41,7 +41,7 @@ export function DeleteCommentButton({
     <button
       type="button"
       onClick={() => deleteComment(commentId, taskId)}
-      className="shrink-0 rounded p-1 text-zinc-400 opacity-0 transition-opacity hover:text-red-500 group-hover:opacity-100"
+      className="shrink-0 rounded p-2 text-zinc-400 transition-opacity hover:text-red-500 md:opacity-0 md:group-hover:opacity-100"
       aria-label="コメントを削除"
     >
       <svg

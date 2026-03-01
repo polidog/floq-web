@@ -1,3 +1,4 @@
+import { BottomNav } from "@/components/bottom-nav";
 import { Header } from "@/components/header";
 import { Sidebar } from "@/components/sidebar";
 
@@ -11,8 +12,11 @@ export default function AuthLayout({
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         <Header />
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <main className="flex-1 overflow-y-auto pb-16 md:pb-0">
+          {children}
+        </main>
       </div>
+      <BottomNav />
     </div>
   );
 }

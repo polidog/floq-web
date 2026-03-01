@@ -19,12 +19,12 @@ export function StatusTabs({
   current: TaskStatus;
 }) {
   return (
-    <div className="flex gap-1 overflow-x-auto border-b border-zinc-200 dark:border-zinc-800">
+    <div className="scrollbar-hide flex gap-1 overflow-x-auto border-b border-zinc-200 dark:border-zinc-800">
       {STATUSES.map(({ value, label }) => (
         <Link
           key={value}
           href={`/tasks?status=${value}`}
-          className={`flex items-center gap-1.5 whitespace-nowrap border-b-2 px-4 py-2.5 text-sm font-medium transition-colors ${
+          className={`flex items-center gap-1.5 whitespace-nowrap border-b-2 px-4 py-3 text-sm font-medium transition-colors ${
             current === value
               ? "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400"
               : "border-transparent text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"

@@ -89,14 +89,14 @@ export function TaskDetail({ task }: { task: Task }) {
             <button
               type="button"
               onClick={() => setEditing(true)}
-              className="rounded-md px-3 py-1.5 text-sm text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-700 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
+              className="rounded-md px-4 py-2.5 text-sm text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-700 dark:hover:bg-zinc-800 dark:hover:text-zinc-300"
             >
               編集
             </button>
             <button
               type="button"
               onClick={handleDelete}
-              className="rounded-md px-3 py-1.5 text-sm text-red-500 transition-colors hover:bg-red-50 hover:text-red-700 dark:hover:bg-red-900/20"
+              className="rounded-md px-4 py-2.5 text-sm text-red-500 transition-colors hover:bg-red-50 hover:text-red-700 dark:hover:bg-red-900/20"
             >
               削除
             </button>
@@ -104,7 +104,7 @@ export function TaskDetail({ task }: { task: Task }) {
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-4 rounded-lg border border-zinc-200 p-4 text-sm dark:border-zinc-800">
+      <div className="grid grid-cols-1 gap-4 rounded-lg border border-zinc-200 p-4 text-sm sm:grid-cols-2 dark:border-zinc-800">
         <div>
           <span className="text-zinc-500 dark:text-zinc-400">ステータス</span>
           <select
