@@ -18,7 +18,6 @@ export async function GET(request: NextRequest) {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#2563eb",
-          borderRadius: size === 512 ? "102px" : "38px",
         }}
       >
         <span
